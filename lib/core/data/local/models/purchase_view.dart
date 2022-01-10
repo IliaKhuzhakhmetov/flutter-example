@@ -15,15 +15,15 @@ extension PurchaseViewExtensions on PurchaseView {
 }
 
 class PurchaseView {
-  int id;
-  String name;
-  double sum;
-  DateTime date;
+  final int id;
+  final String name;
+  final double sum;
+  final DateTime date;
 
   String get normalSum => sum.toStringAsFixed(2).getDecimalValue();
   String get stringDate => DateFormat('dd MMMM yyyy').format(date);
 
-  PurchaseView({
+  const PurchaseView({
     required this.id,
     required this.name,
     required this.sum,

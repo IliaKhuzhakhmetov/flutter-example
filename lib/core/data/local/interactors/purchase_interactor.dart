@@ -16,10 +16,11 @@ class PurchaseInteractor {
   })  : _purchaseRepository = purchaseRepository,
         _itemsRepository = itemsRepository;
 
-  Future addNewPurchase(
-      {required String purchaseName,
-      required DateTime date,
-      required List<ItemView> items}) async {
+  Future addNewPurchase({
+    required String purchaseName,
+    required DateTime date,
+    required List<ItemView> items,
+  }) async {
     final int purchaseId = await _purchaseRepository.addPurchase(PurchaseData(
         name: purchaseName,
         sum: items.map((e) => e.price * e.count).toList().sum(),

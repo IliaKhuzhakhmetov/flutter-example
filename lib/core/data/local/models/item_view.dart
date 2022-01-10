@@ -17,6 +17,7 @@ class ItemView extends Equatable {
   String name;
   int count;
   double price;
+
   ItemView({
     required this.id,
     required this.name,
